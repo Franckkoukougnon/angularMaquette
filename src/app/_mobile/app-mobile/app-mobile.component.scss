@@ -1,0 +1,28 @@
+.container-mobile {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  align-content: center;
+  margin: 50px;
+
+  .inputMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .search-mobile {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      height: 20px;
+      width: 20px;
+      align-items: center;
+    }
+
+  }
+}
