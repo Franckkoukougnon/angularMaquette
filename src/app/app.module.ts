@@ -10,6 +10,7 @@ import { SignItComponent } from './_destop/sign-it/sign-it.component';
 import { AppMobileComponent } from './_mobile/app-mobile/app-mobile.component';
 import { LogoAvatarComponent } from './_destop/logo-avatar/logo-avatar.component';
 import { ImageViewComponent } from './_destop/image-view/image-view.component';
+import { InputComponent } from './_destop/input/input.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ImageViewComponent } from './_destop/image-view/image-view.component';
     AppMobileComponent,
     LogoAvatarComponent,
     ImageViewComponent,
+    InputComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
