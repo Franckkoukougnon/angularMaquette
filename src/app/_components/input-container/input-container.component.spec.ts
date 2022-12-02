@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppMobileComponent } from './app-mobile.component';
+import { InputContainerComponent } from './input-container.component';
 
-describe('AppMobileComponent', () => {
-  let component: AppMobileComponent;
-  let fixture: ComponentFixture<AppMobileComponent>;
+describe('InputContainerComponent', () => {
+  let component: InputContainerComponent;
+  let fixture: ComponentFixture<InputContainerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AppMobileComponent ]
+      declarations: [ InputContainerComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AppMobileComponent);
+    fixture = TestBed.createComponent(InputContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,24 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './_destop/login/login.component';
+import { LoginComponent } from './login/login.component';
 
-import { SignItComponent } from './_destop/sign-it/sign-it.component';
-import { AppMobileComponent } from './_mobile/app-mobile/app-mobile.component';
-import { LogoAvatarComponent } from './_destop/logo-avatar/logo-avatar.component';
-import { ImageViewComponent } from './_destop/image-view/image-view.component';
-import { InputComponent } from './_destop/input/input.component';
+import { SignItComponent } from './_components/sign-it/sign-it.component';
+
+import { LogoAvatarComponent } from './_components/logo-avatar/logo-avatar.component';
+import { ImageViewComponent } from './_components/image-view/image-view.component';
+import { InputComponent } from './_components/input/input.component';
+import { InputContainerComponent } from './_components/input-container/input-container.component';
+import { ButtonComponent } from './_components/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-
     SignItComponent,
-    AppMobileComponent,
     LogoAvatarComponent,
     ImageViewComponent,
     InputComponent,
+    InputContainerComponent,
+    ButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
