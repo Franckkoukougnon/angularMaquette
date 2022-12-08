@@ -15,9 +15,7 @@
 
   }
 
-  .secondary {
-    background-color: #060606 !important;
-  }
+
 
   button {
     width: 100%;
@@ -28,6 +26,11 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
+    #connexion {
+      background-color: blue;
+    }
+
 
   }
 

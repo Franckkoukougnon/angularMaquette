@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  height: 100px;
+  width: 100%;
+
+
+
+
+  .auth-user {
+    flex: 4;
+
+    .login-user {
+      .connexUser {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+
+        .logo-pwd {
+          display: flex;
+
+          #img-pwd {
+            height: 10px;
+            width: 20px;
+            float: right;
+            position: absolute;
+            right: 10px;
+          }
+        }
+
+
+      }
+    }
+  }
+}

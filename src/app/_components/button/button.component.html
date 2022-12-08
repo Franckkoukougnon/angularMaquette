@@ -1,3 +1,8 @@
-<app-sign-it type="submit" value="Connexion"> </app-sign-it>
-<app-sign-it type="submit" value="Sign in Google"></app-sign-it>
-<a routerLink="/search">Mot de passe oublié</a>
+<app-sign-it type="button" value="Connexion" [routerLink]="['/login']" routerLinkActive="router-link-active">
+</app-sign-it>
+
+
+<app-sign-it type="button" value="Sign in Google" id="google" [routerLink]="['/register']"
+  routerLinkActive="router-link-active"></app-sign-it>
+
+<a routerLink="/forget-form">Mot de passe oublié</a>

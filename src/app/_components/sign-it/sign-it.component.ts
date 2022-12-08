@@ -1,5 +1,4 @@
-import { NgClass } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sign-it',
@@ -9,7 +8,7 @@ import { Component, Input } from '@angular/core';
 export class SignItComponent {
   @Input() type: string = '';
   @Input() value: string = '';
-  signGoogle() {
-    alert('Inscrivez-vous!!!');
-  }
+  @Output() clickEmitter: EventEmitter<any | null> = new EventEmitter<
+    any | null
+  >();
 }

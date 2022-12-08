@@ -12,6 +12,8 @@ import { ImageViewComponent } from './_components/image-view/image-view.componen
 import { InputComponent } from './_components/input/input.component';
 import { InputContainerComponent } from './_components/input-container/input-container.component';
 import { ButtonComponent } from './_components/button/button.component';
+import { AuthComponent } from './auth/auth.component';
+import { LoginFormComponent } from './auth/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ButtonComponent } from './_components/button/button.component';
     InputComponent,
     InputContainerComponent,
     ButtonComponent,
+    AuthComponent,
+    LoginFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

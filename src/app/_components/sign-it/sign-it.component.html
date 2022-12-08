@@ -1,3 +1,5 @@
  <div class="container-signIt">
-   <input [type]="type" [value]="value" [className]="value === 'Connexion' ?'primary' : 'secondary'">
+   <button type="button" class="btn" (click)="clickEmitter.emit()">
+     <span>{{value}}</span>
+   </button>
  </div>
