@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
 
+
+
   input[type=submit] {
     width: 100%;
     background-color: #1126e7;
@@ -27,12 +29,20 @@
     border-radius: 4px;
     cursor: pointer;
 
-    #connexion {
+    &.connexion {
       background-color: blue;
     }
 
+    &.secondary {
+      background-color: #151516;
+    }
+
+
+
 
   }
+
+
 
   button:hover {
     background-color: #626668;

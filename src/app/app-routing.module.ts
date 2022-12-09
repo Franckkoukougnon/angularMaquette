@@ -9,30 +9,30 @@ import { RegisterFormComponent } from './auth/register-form/register-form.compon
 
 const routes: Routes = [
   {
-    path: 'auth',
+    path: '',
     component: AuthComponent,
     children: [
       {
-        path: 'register',
+        path: 'register', // Localhost:4200/register
         component: RegisterFormComponent,
       },
       {
-        path: 'forgetpassword',
+        path: 'forgetpassword', // Localhost:4200/forgetpassword
         component: ForgetFormComponent,
       },
 
       {
-        path: 'loginform',
+        path: '', // Localhost:4200// (page d'acceuil)
         component: LoginFormComponent,
       },
       {
-        path: 'signit',
+        path: 'signit', // Localhost:4200/signit
         component: SignItComponent,
       },
     ],
   },
   {
-    path: 'login',
+    path: 'login', // Localhost:4200/login
     component: LoginComponent,
   },
 ];

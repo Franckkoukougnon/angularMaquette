@@ -6,9 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./sign-it.component.scss'],
 })
 export class SignItComponent {
+  @Input() class: string = '';
   @Input() type: string = '';
   @Input() value: string = '';
-  @Output() clickEmitter: EventEmitter<any | null> = new EventEmitter<
-    any | null
-  >();
 }
