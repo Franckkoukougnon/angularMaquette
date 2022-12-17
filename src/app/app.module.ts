@@ -14,7 +14,8 @@ import { InputContainerComponent } from './_components/input-container/input-con
 import { ButtonComponent } from './_components/button/button.component';
 import { AuthComponent } from './auth/auth.component';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterFormComponent } from './auth/register-form/register-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +28,9 @@ import { LoginFormComponent } from './auth/login-form/login-form.component';
     ButtonComponent,
     AuthComponent,
     LoginFormComponent,
+    RegisterFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

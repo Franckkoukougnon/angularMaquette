@@ -1,1 +1,40 @@
-<p>register-form works!</p>
+<div>
+  <form [formGroup]="registerForm" (ngSubmit)="submit()">
+    <label for="email">Username</label>
+    <input type="text" formControlName="username" name="firstname" placeholder="username">
+    <div class="error" *ngIf="username?.touched && username?.errors">
+      <span *ngIf="username?.errors!['required']"> Champs requis</span>
+      <span *ngIf="username?.errors!['minlength']">Username must have at least 8 char. (Currently: {{
+        username?.errors!['minlength']?.actualLength }})</span>
+    </div>
+
+    <label for="psw">Password</label>
+    <input type="password" formControlName="password" name="password" placeholder="your password ..">
+    <div class="error" *ngIf="password?.touched && password?.errors">
+      Password must be at least 8 char includes min 1 uppercase, 1 lowercase, 1 special char.
+    </div>
+
+    <label for="email">Email</label>
+    <input type="text" formControlName="email" name="email" placeholder="Your email..">
+    <div class="error" *ngIf="email?.touched && email?.errors">
+      Invalid E-mail Address
+    </div>
+
+    <label for="email">Number Phone</label>
+    <br>
+    <select name="phoneCode" required>
+      <option selected hidden value="">Code</option>
+      <option value="66">+98</option>
+      <option value="66">+99</option>
+      <option value="66">+90</option>
+      <option value="66">+66</option>
+    </select>
+    <input type="phone" name="phone" formControlName="numberPhone" placeholder="812345678">
+
+
+
+    <div class="clearfix">
+      <button type="submit" class="btn">Sign Up </button>
+    </div>
+  </form>
+</div>

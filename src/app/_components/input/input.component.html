@@ -1,4 +1,5 @@
 <div class="container-input">
   <label [for]="name">{{label}}</label>
-  <input [type]="type" [id]="id" [name]="name" [placeholder]="placeholder">
+  <input [type]="type" [id]="id" [name]="name" [placeholder]="placeholder" #inputEmail
+    (change)="emitInput(inputEmail.value)">
 </div>
