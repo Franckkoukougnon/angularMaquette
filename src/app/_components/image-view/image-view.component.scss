@@ -4,6 +4,13 @@
   img {
     height: 800px;
     width: 800px;
+    display: block;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+
   }
+
 
 }
