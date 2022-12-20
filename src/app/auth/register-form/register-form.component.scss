@@ -9,6 +9,23 @@ select {
   box-sizing: border-box;
 }
 
+.error {
+  color: #c9110f;
+  margin-bottom: 1em;
+}
+
+.deleteNumber {
+  cursor: pointer;
+}
+
+.addNumber {
+  cursor: pointer;
+}
+
+.addNumber2 {
+  display: none;
+}
+
 input[type=phone],
 select {
   width: 100%;

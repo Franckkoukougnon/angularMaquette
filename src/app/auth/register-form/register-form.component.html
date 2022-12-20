@@ -22,14 +22,28 @@
 
     <label for="email">Number Phone</label>
     <br>
-    <select name="phoneCode" required>
-      <option selected hidden value="">Code</option>
-      <option value="66">+98</option>
-      <option value="66">+99</option>
-      <option value="66">+90</option>
-      <option value="66">+66</option>
-    </select>
-    <input type="phone" name="phone" formControlName="numberPhone" placeholder="812345678">
+    <div formArrayName="phones">
+
+      <div *ngFor="let phone of phones.controls; let i=index; let first=first" [formGroupName]="i">
+        <select formControlName="phonePrefix" required>
+          <option selected hidden value="">Code</option>
+          <option value="66">+98</option>
+          <option value="66">+99</option>
+          <option value="66">+90</option>
+          <option value="66">+66</option>
+        </select>
+        <input type="phone" name="phone" formControlName="phoneNumber" placeholder="812345678">
+        <span class="deleteNumber" (click)="deletePhone(i)" *ngIf="!first">Remove</span>
+        <div class="error" *ngIf="getPhoneNumber(i)?.touched &&  getPhoneNumber(i)?.errors">
+          Invalid E-mail Address
+        </div>
+      </div>
+
+    </div>
+    <div class="addNumber" (click)="addPhone()" [ngClass]="{'addNumber2' : phones.length == 3}">+ Add Phone</div>
+    <span class="error" *ngIf="phones?.length == 3"> You can add up to 3 number</span>
+
+
 
 
 

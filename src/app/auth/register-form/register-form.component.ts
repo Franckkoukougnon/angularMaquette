@@ -10,6 +10,8 @@ export class RegisterFormComponent implements OnInit {
   title = 'register-form';
 
   registerForm!: FormGroup;
+  numberPhone: any;
+  first: any;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -27,7 +29,7 @@ export class RegisterFormComponent implements OnInit {
       ],
       email: ['', [Validators.email, Validators.required]],
       password: ['', [Validators.minLength(4), Validators.maxLength(6)]],
-      numberPhone: this.formBuilder.array([]),
+      phones: this.formBuilder.array([]),
     });
     this.addPhone();
   }
@@ -39,7 +41,7 @@ export class RegisterFormComponent implements OnInit {
     return this.registerForm.get('email');
   }
   get phones() {
-    return this.registerForm.get('phone') as FormArray;
+    return this.registerForm.get('phones') as FormArray;
   }
 
   get password() {
@@ -47,7 +49,7 @@ export class RegisterFormComponent implements OnInit {
   }
 
   addPhone() {
-    let phones = this.formBuilder.group({
+    let phone = this.formBuilder.group({
       phonePrefix: '',
       phoneNumber: [
         '',
@@ -60,7 +62,7 @@ export class RegisterFormComponent implements OnInit {
       ],
     });
 
-    if (this.phones.length < 3) this.phones.push(phones);
+    if (this.phones.length < 3) this.phones.push(phone);
     console.log(this.phones);
   }
   getPhoneNumber(index: number) {
