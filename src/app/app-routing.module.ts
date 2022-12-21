@@ -6,6 +6,7 @@ import { SignItComponent } from './_components/sign-it/sign-it.component';
 import { ForgetFormComponent } from './auth/forget-form/forget-form.component';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { RegisterFormComponent } from './auth/register-form/register-form.component';
+import { ConnexionComponent } from './_pages/connexion/connexion.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'login', // Localhost:4200/login
     component: LoginComponent,
+  },
+  {
+    path: 'connexionUser', // Localhost:4200/connexionUser
+    component: ConnexionComponent,
   },
 ];
 

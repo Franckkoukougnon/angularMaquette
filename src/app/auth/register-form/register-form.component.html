@@ -41,6 +41,7 @@
 
     </div>
     <div class="addNumber" (click)="addPhone()" [ngClass]="{'addNumber2' : phones.length == 3}">+ Add Phone</div>
+
     <span class="error" *ngIf="phones?.length == 3"> You can add up to 3 number</span>
 
 

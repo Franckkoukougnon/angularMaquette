@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -16,6 +17,10 @@ import { AuthComponent } from './auth/auth.component';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterFormComponent } from './auth/register-form/register-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ConnexionComponent } from './_pages/connexion/connexion.component';
+import { ForgetpasswordComponent } from './_pages/forgetpassword/forgetpassword.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +34,19 @@ import { RegisterFormComponent } from './auth/register-form/register-form.compon
     AuthComponent,
     LoginFormComponent,
     RegisterFormComponent,
+    ConnexionComponent,
+    ForgetpasswordComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AngularSvgIconModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

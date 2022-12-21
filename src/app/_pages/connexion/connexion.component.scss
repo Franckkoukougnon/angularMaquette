@@ -1,0 +1,45 @@
+.containerUser {
+  display: flex;
+
+
+
+  .userProfile {
+    padding: 10px;
+    margin: 10px;
+
+    img {
+      max-width: 70%;
+      max-height: 70%;
+      border-radius: 30px;
+    }
+
+    .userInfo {
+      font-size: small;
+      text-align: left;
+    }
+  }
+
+  .userMessage {
+    display: flex;
+    flex-direction: column;
+
+    .userWrite {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .messangeSend {
+        display: flex;
+      }
+
+
+
+      img {
+        max-width: 50px;
+        max-height: 50px;
+        border-radius: 30px;
+      }
+
+    }
+  }
+}
